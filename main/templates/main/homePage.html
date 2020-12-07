@@ -1,3 +1,32 @@
+{% include "main/wrapper.html" %}
 {% block content %}
-<h2>Hai!</h2>
+<header class="d-flex justify-content-center">
+<div class="svgCont">
+    <div class="elipse"></div>
+    <span class="labelDj">Django</span>
+    {% include "main/includes/svg/header.html" %}
+</div>
+</header>
+<section class="searchCont w-100 d-flex justify-content-center">
+    <div class="w-75 d-flex justify-content-center align-items-center rounded-lg">
+        <form class="d-flex justify-content-center">
+            <input type="text" class="form-control">
+            <input type="submit" value="Найти" class="btn-lg button-search">
+        </form>
+    </div>
+</section>
+<section class="row contInfo">
+    <div class="col-md-5 row">
+        <p>
+            <span>Django</span>
+            - это свободный фреймворк для веб-приложений на языке Python, использующий шаблон проектирования MVC. Проект поддерживается организацией Django Software Foundation.
+        </p>
+    </div>
+    <div class="col-md-7 row">
+        <p>
+            <span>Python</span>
+            - Высокоуровневый язык программирования общего назначения, ориентированный на повышение производительности разработчика и читаемости кода. Синтаксис ядра Python минималистичен. В то же время стандартная библиотека включает большой набор полезных функций.
+        </p>
+    </div>
+</section>
 {% endblock %}

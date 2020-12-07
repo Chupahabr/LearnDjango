@@ -1,0 +1,73 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  font-family: "Reem Kufi", sans-serif;
+  color: black;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+}
+
+.svgCont {
+  position: relative;
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  height: 350px;
+}
+
+.svgHeader {
+  width: 691px;
+}
+
+.elipse {
+  margin-top: -150px;
+  width: 532px;
+  height: 584px;
+  background: #D54B4B;
+  box-shadow: -30px 4px 30px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 50%;
+  border: 20px solid #792121;
+}
+
+.labelDj {
+  position: absolute;
+  top: 35%;
+  right: 25%;
+  transform: rotate(-20deg);
+  font-size: 5em;
+}
+
+.searchCont {
+  padding: 20px 0;
+  height: 120px;
+}
+.searchCont div {
+  background: #3C3636;
+  border-radius: 10px;
+}
+.searchCont div form {
+  width: 96%;
+}
+.searchCont div form input {
+  margin: 0 20px;
+}
+
+.button-search {
+  width: 60%;
+  height: 45.26px;
+  background: #E6AF70;
+  border-radius: 10px;
+  font-weight: bolder;
+  box-shadow: none;
+}
+
+.contInfo {
+  font-size: 1.5rem;
+}
+.contInfo span {
+  font-size: 2.5rem;
+}
