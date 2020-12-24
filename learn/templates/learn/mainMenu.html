@@ -1,0 +1,24 @@
+{% extends "learn/wrapper.html" %}
+{% block content %}
+<section class="p-3 sectionMM">
+    <script>let num </script>
+    {% for val in sections %}
+    <div class="row">
+        <p class="section h4 w-100">{{val.id_section}} {{val.section}}</p>
+<script>
+    num = 1;
+</script>
+            {% for val2 in titles %}
+                {% if val.section|stringformat:"s" == val2.id_section|stringformat:"s" %}
+                    <a href="{{val2.id_title}}" class="d-inline-block title alert-link col-md-3 col-sm-6">{{val.id_section}}.<span id="num"></span> {{val2.title}}</a>
+<script>
+    $(".title #num").last().text(num);
+    num++;
+</script>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <hr>
+    {% endfor %}
+</section>
+{% endblock %}

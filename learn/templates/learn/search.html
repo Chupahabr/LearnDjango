@@ -1,0 +1,10 @@
+{% extends "learn/wrapper.html" %}
+{% block content %}
+<section class="p-3 sectionMM">
+    {% for val in queryset %}
+    <a href="{{val.id_title}}" class="section h4 w-100">{{val.title}}</a>
+    <p>{{val.article_text|truncatewords_html:30}}</p>
+    <hr>
+    {% endfor %}
+</section>
+{% endblock %}

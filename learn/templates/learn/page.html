@@ -1,0 +1,9 @@
+{% extends "learn/wrapper.html" %}
+{% block content %}
+<section class="p-3 sectionMM">
+    <p class="section h4 w-100">{{article.title}}</p>
+    <p>
+        {{article.article_text|linebreaks}}
+    </p>
+</section>
+{% endblock %}

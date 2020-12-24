@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 't4weoa+c2vde4hm!vh5v2m_9w=%!2d3pkrtmm4b+%at1p^s!#!'
@@ -12,6 +13,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'main',
+    'learn',
+    # 'haystack',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -34,6 +37,19 @@ ROOT_URLCONF = 'LearnDjango.urls'
 
 TEMPLATES = [
     {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+    {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
@@ -47,6 +63,15 @@ TEMPLATES = [
         },
     },
 ]
+
+# HAYSTACK_CONNECTIONS = {
+#     'default': {
+#         'ENGINE': 'LearnDjango.whoosh_cn_backend.WhooshEngine',
+#         'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+#     },
+# }
+# # Automatically update searching index
+# HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 WSGI_APPLICATION = 'LearnDjango.wsgi.application'
 
@@ -95,3 +120,12 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.JSONParser',
+    )
+}
