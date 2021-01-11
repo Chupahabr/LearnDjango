@@ -1,12 +1,13 @@
 {% extends "main/wrapper.html" %}
 {% block content %}
-<header class="d-flex justify-content-center">
+<header class="d-flex justify-content-center overflow-hidden">
 <div class="svgCont">
     <div class="elipse"></div>
     <span class="labelDj">Django</span>
     {% include "main/includes/svg/header.html" %}
 </div>
 </header>
+<main>
 <section class="row searchCont d-flex justify-content-center">
     <div class="w-75 d-flex justify-content-center align-items-center rounded-lg">
         <form class="d-flex justify-content-center" action="learn" method="GET">
@@ -32,5 +33,6 @@
         <button class="btnBegin">Начать изучение</button>
     </div>
 </section>
+</main>
 {% include "main/includes/footer.html" %}
 {% endblock %}

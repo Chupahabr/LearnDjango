@@ -1,9 +1,13 @@
 {% extends "learn/wrapper.html" %}
 {% block content %}
+<main>
 <section class="p-3 sectionMM">
     <p class="section h4 w-100">{{article.title}}</p>
     <p>
+        {% autoescape off %}
         {{article.article_text|linebreaks}}
+        {% endautoescape %}
     </p>
 </section>
+</main>
 {% endblock %}

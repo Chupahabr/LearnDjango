@@ -8,7 +8,6 @@ body {
 
 header {
   position: relative;
-  overflow: hidden;
 }
 
 footer {
@@ -127,10 +126,14 @@ input, button {
   font-weight: bold;
 }
 
-.sectionMM {
-  min-height: 53.27vw;
-}
-
 script {
   display: none;
+}
+
+main {
+  min-height: 57.4vh;
+}
+
+.body-titles main {
+  min-height: 88.764vh;
 }

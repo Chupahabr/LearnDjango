@@ -10,6 +10,7 @@ class newDetailView(DetailView):
     model = titleList
     template_name = "learn/page.html"
     context_object_name = "article"
+    print(titleList.title)
 
 
 def search(request):
@@ -34,3 +35,7 @@ def index(request):
     sections = sectionList.objects.all()
     titles = titleList.objects.all()
     return render(request, 'learn/mainMenu.html', {"sections": sections, "titles": titles})
+
+def profile(request):
+    user = 1
+    return render(request, 'account/profile.html')
